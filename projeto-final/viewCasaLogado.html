@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta charset="utf-8">
+        <title>Casa Automática - Usuário</title>
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <link rel="stylesheet" href="viewCasaLogado.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="viewCasaLogado.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card hovercard">
+                        <div class="card-background">
+                            <img class="card-bkimg" alt="" src="imagemDefault.jpg">
+                        </div>
+                        <div class="useravatar" onclick="alterarFoto()">
+                            <img alt="" src="imagemDefault.jpg">
+                        </div>
+                        <div class="card-info" > 
+                            <span class="card-title" id="userName">UserName</span>
+                            <button onclick="sair()">Sair</button>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Componente</th>
+                                <th scope="col">Estado/informação</th>
+                                <th scope="col">Ação</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Temperatura</td>
+                                    <td id="Temperatura"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Luz do quarto</td>
+                                    <td id="quartoLed"></td>
+                                    <td>
+                                        <button onclick="ligarLed(this)">ligar</button>
+                                        <button onclick="desligarLed(this)">desligar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Luz da sala</td>
+                                    <td id="salaLed"></td>
+                                    <td>
+                                        <button onclick="ligarLed(this)">ligar</button>
+                                        <button onclick="desligarLed(this)">desligar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Luz do banheiro</td>
+                                    <td id="banheiroLed"></td>
+                                    <td>
+                                        <button onclick="ligarLed(this)">ligar</button>
+                                        <button onclick="desligarLed(this)">desligar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Luz da cozinha</td>
+                                    <td id="cozinhaLed"></td>
+                                    <td>
+                                        <button onclick="ligarLed(this)">ligar</button>
+                                        <button onclick="desligarLed(this)">desligar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
