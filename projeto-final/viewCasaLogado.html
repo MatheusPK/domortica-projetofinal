@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta charset="utf-8">
         <title>Casa Automática - Usuário</title>
-        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
         <link rel="stylesheet" href="viewCasaLogado.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,7 +15,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-xl-12">
                     <div class="card hovercard">
                         <div class="card-background">
                             <img class="card-bkimg" alt="" src="imagemDefault.jpg">
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-xl-12">
                     <table class="table table-bordered">
                         <thead class="thead-dark">
                             <tr>
@@ -44,13 +44,17 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>Temperatura</td>
-                                    <td id="Temperatura"></td>
+                                    <td>Led1</td>
+                                    <td id="Led1"></td>
+                                    <td>
+                                        <button onclick="ligarLed(this)">ligar</button>
+                                        <button onclick="desligarLed(this)">desligar</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td>Luz do quarto</td>
-                                    <td id="quartoLed"></td>
+                                    <td>Led2</td>
+                                    <td id="Led2"></td>
                                     <td>
                                         <button onclick="ligarLed(this)">ligar</button>
                                         <button onclick="desligarLed(this)">desligar</button>
@@ -58,30 +62,8 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
-                                    <td>Luz da sala</td>
-                                    <td id="salaLed"></td>
-                                    <td>
-                                        <button onclick="ligarLed(this)">ligar</button>
-                                        <button onclick="desligarLed(this)">desligar</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Luz do banheiro</td>
-                                    <td id="banheiroLed"></td>
-                                    <td>
-                                        <button onclick="ligarLed(this)">ligar</button>
-                                        <button onclick="desligarLed(this)">desligar</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Luz da cozinha</td>
-                                    <td id="cozinhaLed"></td>
-                                    <td>
-                                        <button onclick="ligarLed(this)">ligar</button>
-                                        <button onclick="desligarLed(this)">desligar</button>
-                                    </td>
+                                    <td>Temperatura</td>
+                                    <td id="Temperatura"></td>
                                 </tr>
                             </tbody>
                     </table>
