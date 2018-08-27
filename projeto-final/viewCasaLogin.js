@@ -43,7 +43,7 @@ function logar(){
 function criarConta(){
     const usuario = $("#txtUsuario").val();
     if(usuario === "") {
-      alert("Insira um nome")
+      alert("Insira um nome");
       return;
     }
     const email = $("#txtEmail").val();
