@@ -1,4 +1,4 @@
-var config = {
+﻿var config = {
     apiKey: "AIzaSyBkPN5Uzu_TnRlXCxnO1Ac0YTz2JkicGPA",
     authDomain: "casa-automatica-86bff.firebaseapp.com",
     databaseURL: "https://casa-automatica-86bff.firebaseio.com",
@@ -19,7 +19,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 function sair(){
-    firebase.auth().signOut().then(e => location.href = "viewCasaLogin.html").catch(e => console.log("catch login", e.message));
+    firebase.auth().signOut().then(e => location.href = "index.html").catch(e => console.log("catch login", e.message));
 }
 
 const quartoLed = firebase.database().ref('quartoLed');
@@ -27,6 +27,11 @@ const banheiroLed = firebase.database().ref('banheiroLed');
 const cozinhaLed = firebase.database().ref('cozinhaLed');
 const salaLed = firebase.database().ref('salaLed');
 const Temperatura = firebase.database().ref('Temperatura');
+const gas = firebase.database().ref('gas');
+
+gas.on('value', valor => {
+    $("#Gas").text(valor.val());
+})
 
 quartoLed.on('value', valor => {
     $("#quartoLed").text(valor.val());
