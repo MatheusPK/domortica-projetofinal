@@ -22,7 +22,6 @@ function sair(){
     firebase.auth().signOut().then(e => location.href = "index.html").catch(e => console.log("catch login", e.message));
 }
 
-const quartoLed = firebase.database().ref('quartoLed');
 const banheiroLed = firebase.database().ref('banheiroLed');
 const cozinhaLed = firebase.database().ref('cozinhaLed');
 const salaLed = firebase.database().ref('salaLed');
@@ -32,10 +31,6 @@ const gas = firebase.database().ref('gas');
 gas.on('value', valor => {
     $("#Gas").text(valor.val());
 })
-
-quartoLed.on('value', valor => {
-    $("#quartoLed").text(valor.val());
-});
 
 banheiroLed.on('value', valor => {
     $("#banheiroLed").text(valor.val());
